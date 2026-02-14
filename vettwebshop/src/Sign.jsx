@@ -9,6 +9,7 @@ const Signup = () => {
         <p>The universe awaits you</p>
       </div>
       <div className="signup">
+        <Header />
         <form>
           <label htmlFor="fname">First Name</label><br />
           <input type="text" id="fname" placeholder="Amy" required /><br />
@@ -22,9 +23,11 @@ const Signup = () => {
           <input type="submit" className="submitbutton" value="Create Account" />
           <p>Already have an account? <Link to="/login">Log In</Link></p>
         </form>
+
+        <Footer />
       </div>
     </>
   );
 };
 
-export default Signup;
+export default Sign;
