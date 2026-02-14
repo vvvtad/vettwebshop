@@ -7,7 +7,7 @@
 }
 
 html {
-    background-image: url('bg1.jpg');
+    background-image: url('/bg1.jpg');
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
