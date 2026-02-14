@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     if (email && password) {
       alert("Access granted. Step into the galaxy.");
-      navigate('/home');
+      navigate('/App');
     } else {
       alert("Please provide your credentials to the admin.");
     }
@@ -19,6 +21,13 @@ const Login = () => {
 
   return (
     <div className="login">
+      <Header />
+
+      <div className="title">
+        <h1>Log In</h1>
+        <p>The universe awaits you</p>
+      </div>
+
       <form onSubmit={handleLogin}>
         <label htmlFor="email">Email Address</label><br />
         <input 
@@ -44,8 +53,10 @@ const Login = () => {
         </div><br />
 
         <button type="submit" className="submitbutton">Log In</button>
-        <p>Don't have an account? <Link to="/signup">Register</Link></p>
+        <p>Don't have an account? <Link to="/Sign">Register</Link></p>
       </form>
+
+      <Footer />
     </div>
   );
 };
